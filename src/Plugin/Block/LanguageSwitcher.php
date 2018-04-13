@@ -41,11 +41,10 @@ class LanguageSwitcher extends BlockBase {
      * @see \Drupal\block\BlockViewBuilder
      */
     public function build() {
-        $route = Drupal::routeMatch()->getRouteName();
+        $currentUrl = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getCurrentLanguage()));
         $languages = Drupal::languageManager()
-            ->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT,
-            Url::fromRoute($route, array('language' => Drupal::languageManager()->getCurrentLanguage())));
-        kint(['route' => $route, 'languages' => $languages]);
+            ->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, $currentUrl);
+        kint(['route' => $currentUrl->toString(), 'languages' => $languages]);
         return [
             '#theme' => 'language_switcher'
         ];
