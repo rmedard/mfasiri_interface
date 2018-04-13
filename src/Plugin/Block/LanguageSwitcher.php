@@ -45,7 +45,7 @@ class LanguageSwitcher extends BlockBase {
         $languages = Drupal::languageManager()
             ->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT,
             Url::fromRoute($route, array('language' => Drupal::languageManager()->getCurrentLanguage())));
-        kint(['rout' => $route, 'languages' => $languages]);
+        kint(['route' => $route, 'languages' => $languages]);
         return [
             '#theme' => 'language_switcher'
         ];
