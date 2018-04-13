@@ -1,0 +1,11 @@
+name: Mmfasiri Interface Module
+type: module
+description: 'Mfasiri custom module to handle user interfaces.'
+package: Mfasiri Custom Modules
+core: 8.x
+
+dependencies:
+  - twig_tweak:twig_tweak
+  - block
+
+version: '8.x-1.0'
