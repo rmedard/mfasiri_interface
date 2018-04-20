@@ -1,7 +1,7 @@
 mfasiri_interface.content:
   path: '/homepage'
   defaults:
-    _controller: '\Drupal\mfasiri_interface\Controller\HomePageController::content'
     _title: 'Welcome to Mfasiri'
+    _controller: '\Drupal\mfasiri_interface\Controller\HomePageController::content'
   requirements:
     _permission: 'access content'
