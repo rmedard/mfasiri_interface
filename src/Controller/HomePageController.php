@@ -18,7 +18,7 @@ use Drupal\Core\Controller\ControllerBase;
 class HomePageController extends ControllerBase {
     public function content() {
         return array(
-            '#theme' => 'homepage'
+            '#theme' => 'mfasiri_homepage'
         );
     }
 }
