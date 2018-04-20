@@ -16,10 +16,12 @@ use Drupal\Core\Controller\ControllerBase;
  * @package Drupal\mfasiri_interface\Controller
  */
 class HomePageController extends ControllerBase {
+
     public function content() {
         $element = array(
             '#theme' => 'mfasiri_homepage'
         );
         return $element;
     }
+
 }
