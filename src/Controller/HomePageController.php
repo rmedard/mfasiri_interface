@@ -19,9 +19,10 @@ class HomePageController extends ControllerBase {
 
     public function content() {
         $element = array(
-            '#type' => 'markup',
-            '#markup' => $this->t('This is it')
+            '#theme' => 'mfasiri_homepage',
+            '#test_var' => $this->t('Test Value'),
         );
+
         return $element;
     }
 
