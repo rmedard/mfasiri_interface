@@ -4,14 +4,19 @@
 * A description of what your module does.
 */
 
+use Drupal\node\Entity\Node;
+
 /**
  * Implements hook_theme().
  */
 function mfasiri_interface_theme($existing, $type, $theme, $path)
 {
+    $interpretor_platform = Node::load(8);
     return [
       'mfasiri_homepage' => [
-          'variables' => [],
+          'variables' => [
+              'platform_node' => $interpretor_platform,
+          ],
       ],
     ];
 }
