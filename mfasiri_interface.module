@@ -18,7 +18,7 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
     return [
       'mfasiri_homepage' => [
           'variables' => [
-              'platform_node' => $interpretor_platform->getTranslation('nl'),
+              'platform_node' => $interpretor_platform->getTranslation('fr'),
           ],
       ],
     ];
