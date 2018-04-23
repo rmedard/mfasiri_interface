@@ -11,7 +11,7 @@
             <h3  class="text-center">{{ node1.title.value }}</h3>
             {{ node1.body.value|truncate(400, true, true)|raw }}
             <div class="action-btn">
-                <a href="{{ path('entity.node.canonical', {'node':node1.id}) }}" class="btn btn-default btn-xs"></a>
+                <a href="{{ path('entity.node.canonical', {'node':node1.id}) }}" class="btn btn-default btn-xs">Read more</a>
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
             <h3 class="text-center">{{ node2.title.value }}</h3>
             {{ node2.body.value|truncate(400, true, true)|raw }}
             <div class="action-btn">
-                <a href="{{ path('entity.node.canonical', {'node':node2.id}) }}" class="btn btn-default btn-xs"></a>
+                <a href="{{ path('entity.node.canonical', {'node':node2.id}) }}" class="btn btn-default btn-xs">Read more</a>
             </div>
         </div>
         <div class="col-sm-4 img-side">
