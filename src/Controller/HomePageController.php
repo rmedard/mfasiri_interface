@@ -9,9 +9,7 @@
 namespace Drupal\mfasiri_interface\Controller;
 
 
-use Drupal;
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\node\Entity\Node;
 
 /**
  * Class HomePageController
@@ -20,11 +18,8 @@ use Drupal\node\Entity\Node;
 class HomePageController extends ControllerBase {
 
     public function content() {
-        $interpretor_platform = Node::load(8);
-        $translation = Drupal::service('entity.repository')->getTranslationFromContext($interpretor_platform);
         $element = array(
-            '#theme' => 'mfasiri_homepage',
-            '#node' => $translation
+            '#theme' => 'mfasiri_homepage'
         );
         return $element;
     }
