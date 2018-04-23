@@ -1,9 +1,12 @@
 <div>
     Languages
-    {#<div class="btn-group" role="group" aria-label="...">#}
-    {{ links }}
+    <div class="btn-group" role="group" aria-label="...">
+
+    {#{{ path('entity.node.canonical', {'node':node1.id}) }}#}
     {% for link in links %}
-        <button type="button" class="btn btn-default">{{ loop.index }}: {{ link.language.id }}</button>
+        {% if link.url.routename == 'entity.node.canonical' %}
+            <button type="button" class="btn btn-default">{{ path('entity.node.canonical', {'node':node1.id}) }} </button>
+        {% endif %}
     {% endfor %}
-    {#</div>#}
+    </div>
 </div>
