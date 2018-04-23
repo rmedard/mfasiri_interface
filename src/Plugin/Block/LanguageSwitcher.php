@@ -46,7 +46,10 @@ class LanguageSwitcher extends BlockBase {
             ->getLanguageSwitchLinks(LanguageInterface::TYPE_INTERFACE, $currentUrl);
         return [
             '#theme' => 'language_switcher',
-            '#links' => $languages->links
+            '#links' => $languages->links,
+            '#cache' => array(
+                'max-age' => 0,
+            )
         ];
     }
 }
