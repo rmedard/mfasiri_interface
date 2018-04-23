@@ -11,12 +11,13 @@ use Drupal\node\Entity\Node;
  */
 function mfasiri_interface_theme($existing, $type, $theme, $path)
 {
-    $interpretor_platform = Node::load(8);
-    $translation = Drupal::service('entity.repository')->getTranslationFromContext($interpretor_platform);
+    $langcode = Drupal::languageManager()->getLanguage(\Drupal\Core\Language\Language::TYPE_CONTENT);
+    $interpretor_platform = Node::load(8)->getTranslation($langcode);
+//    $translation = Drupal::service('entity.repository')->getTranslationFromContext($interpretor_platform);
     return [
       'mfasiri_homepage' => [
           'variables' => [
-              'platform_node' => $translation,
+              'platform_node' => $interpretor_platform,
           ],
       ],
     ];
