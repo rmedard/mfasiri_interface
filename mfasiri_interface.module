@@ -18,7 +18,7 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
         ],
         'language_switcher' => [
             'variables' => [
-                'languages' => NULL
+                'links' => NULL
             ],
         ],
     ];
