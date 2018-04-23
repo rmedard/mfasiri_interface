@@ -1,7 +1,7 @@
 <div class="homepage-services col-sm-12">
     <div class="row well well-sm">
         <div class="col-sm-4 img-side">
-            <a href="{{ drupal_token('site:url') ~ path('entity.node.canonical', {'node':node1.id}) }}">
+            <a href="{{ path('entity.node.canonical', {'node':node1.id}) }}">
                 <img
                      src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}"
                      alt="{{ node1.field_service_image.alt }}">
@@ -10,15 +10,21 @@
         <div class="col-sm-8 text-side">
             <h3  class="text-center">{{ node1.title.value }}</h3>
             {{ node1.body.value|truncate(400, true, true)|raw }}
+            <div class="action-btn">
+                <a href="{{ path('entity.node.canonical', {'node':node1.id}) }}" class="btn btn-default btn-xs"></a>
+            </div>
         </div>
     </div>
     <div class="row well well-sm">
         <div class="col-sm-8 text-side">
             <h3 class="text-center">{{ node2.title.value }}</h3>
             {{ node2.body.value|truncate(400, true, true)|raw }}
+            <div class="action-btn">
+                <a href="{{ path('entity.node.canonical', {'node':node2.id}) }}" class="btn btn-default btn-xs"></a>
+            </div>
         </div>
         <div class="col-sm-4 img-side">
-            <a href="{{ drupal_token('site:url') ~ path('entity.node.canonical', {'node':node2.id}) }}">
+            <a href="{{ path('entity.node.canonical', {'node':node2.id}) }}">
                 <img
                      src="{{ node2.field_service_image.entity.uri.value | image_style('service_image_250x150') }}"
                      alt="{{ node2.field_service_image.alt }}">
