@@ -5,5 +5,3 @@ mfasiri_interface.content:
     _controller: '\Drupal\mfasiri_interface\Controller\HomePageController::content'
   requirements:
     _permission: 'access content'
-#  options:
-#    no_cache: 'TRUE'
