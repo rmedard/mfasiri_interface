@@ -12,7 +12,8 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
     return [
       'mfasiri_homepage' => [
           'variables' => [
-              'node' => NULL,
+              'node1' => NULL,
+              'node2' => NULL
           ],
       ],
     ];
