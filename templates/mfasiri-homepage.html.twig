@@ -1,9 +1,9 @@
-<div>
+<div class="homepage-services">
     <ul class="media-list">
         <li class="media well well-sm">
             <div class="media-left">
                 <a href="#">
-                    <img class="media-object" src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="...">
+                    <img class="media-object" src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="{{ node1.field_service_image.alt }}">
                 </a>
             </div>
             <div class="media-body">
@@ -18,7 +18,7 @@
             </div>
             <div class="media-right">
                 <a href="#">
-                    <img class="media-object" src="{{ node2.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="...">
+                    <img class="media-object" src="{{ node2.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="{{ node2.field_service_image.alt }}">
                 </a>
             </div>
         </li>
