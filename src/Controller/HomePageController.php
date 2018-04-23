@@ -20,13 +20,13 @@ use Drupal\node\Entity\Node;
 class HomePageController extends ControllerBase {
 
     public function content() {
-        $interpretorPlatform = Node::load(8);
-        $tripsToAfrica = Node::load(8);
-        $interpretorPlatformTrans = Drupal::service('entity.repository')->getTranslationFromContext($interpretorPlatform);
+        $interpreterPlatform = Node::load(8);
+        $tripsToAfrica = Node::load(9);
+        $interpreterPlatformTrans = Drupal::service('entity.repository')->getTranslationFromContext($interpreterPlatform);
         $tripsToAfricaTrans = Drupal::service('entity.repository')->getTranslationFromContext($tripsToAfrica);
         $element = array(
             '#theme' => 'mfasiri_homepage',
-            '#node1' => $interpretorPlatformTrans,
+            '#node1' => $interpreterPlatformTrans,
             '#node2' => $tripsToAfricaTrans,
         );
         return $element;
