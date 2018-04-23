@@ -11,14 +11,14 @@
         </div>
     </li>
     <li class="media">
-        <div class="media-left">
-            <a href="#">
-                <img class="media-object" src="{{ node2.field_service_image.entity.uri.value | image_style('thumbnail') }}" alt="...">
-            </a>
-        </div>
         <div class="media-body">
             <h4 class="media-heading">{{ node2.title.value }}</h4>
             {{ node2.body.value|raw }}
+        </div>
+        <div class="media-right">
+            <a href="#">
+                <img class="media-object" src="{{ node2.field_service_image.entity.uri.value | image_style('thumbnail') }}" alt="...">
+            </a>
         </div>
     </li>
 </ul>
