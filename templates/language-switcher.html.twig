@@ -1,8 +1,9 @@
 <div>
     Languages
     {#<div class="btn-group" role="group" aria-label="...">#}
-        {% for link in links %}
-            <button type="button" class="btn btn-default">{{ loop.index }}: {{ link }}</button>
-        {% endfor %}
+    {{ links }}
+    {% for link in links %}
+        <button type="button" class="btn btn-default">{{ loop.index }}: {{ link }}</button>
+    {% endfor %}
     {#</div>#}
 </div>
