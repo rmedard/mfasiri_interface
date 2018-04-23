@@ -31,5 +31,4 @@ class HomePageController extends ControllerBase {
         );
         return $element;
     }
-
 }
