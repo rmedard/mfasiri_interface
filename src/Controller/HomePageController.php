@@ -24,7 +24,7 @@ class HomePageController extends ControllerBase {
         $translation = Drupal::service('entity.repository')->getTranslationFromContext($interpretor_platform);
         $element = array(
             '#theme' => 'mfasiri_homepage',
-            'platform_node' => $translation
+            '#platform_node' => $translation
         );
         return $element;
     }
