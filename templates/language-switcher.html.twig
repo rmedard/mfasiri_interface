@@ -4,7 +4,7 @@
             {% if link.url.routename == 'entity.node.canonical' %}
                 <li>
                     <a href="{{ path('entity.node.canonical', {'node':link.url.routeparameters.node}, {'language': link.language}) }}">
-                        <span><img src="{{ directory }}/images/flags/{{ link.language.id }}.svg" alt="{{ link.language.label }}"></span>
+                        <span><img src="{{ file_url('public:')}}/images/flags/{{ link.language.id }}.svg" alt="{{ link.language.label }}"></span>
                         {{ link.language.label }}
                     </a>
                 </li>
