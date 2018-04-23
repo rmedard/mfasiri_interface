@@ -1,8 +1,8 @@
 <?php
 /**
-* @file
-* A description of what your module does.
-*/
+ * @file
+ * A description of what your module does.
+ */
 
 /**
  * Implements hook_theme().
@@ -10,11 +10,16 @@
 function mfasiri_interface_theme($existing, $type, $theme, $path)
 {
     return [
-      'mfasiri_homepage' => [
-          'variables' => [
-              'node1' => NULL,
-              'node2' => NULL
-          ],
-      ],
+        'mfasiri_homepage' => [
+            'variables' => [
+                'node1' => NULL,
+                'node2' => NULL
+            ],
+        ],
+        'language_switcher' => [
+            'variables' => [
+                'languages' => NULL
+            ],
+        ],
     ];
 }
