@@ -5,7 +5,7 @@
     {#{{ path('entity.node.canonical', {'node':node1.id}) }}#}
     {% for link in links %}
         {% if link.url.routename == 'entity.node.canonical' %}
-            <button type="button" class="btn btn-default">{{ path('entity.node.canonical', {'node':node1.id}) }} </button>
+            <button type="button" class="btn btn-default">{{ path('entity.node.canonical', {'node':link.url.routeparameters.node}) }} </button>
         {% endif %}
     {% endfor %}
     </div>
