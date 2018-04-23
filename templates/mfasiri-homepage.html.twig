@@ -1,21 +1,21 @@
 <div class="homepage-services">
     <div class="row well well-sm">
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <a href="#">
                 <img class="media-object" src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="{{ node1.field_service_image.alt }}">
             </a>
         </div>
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <h4 class="media-heading">{{ node1.title.value }}</h4>
             {{ node1.body.value|raw }}
         </div>
     </div>
     <div class="row well well-sm">
-        <div class="col-sm-9">
+        <div class="col-sm-8">
             <h4 class="media-heading">{{ node2.title.value }}</h4>
             {{ node2.body.value|raw }}
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-4">
             <a href="#">
                 <img class="media-object" src="{{ node2.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="{{ node2.field_service_image.alt }}">
             </a>
