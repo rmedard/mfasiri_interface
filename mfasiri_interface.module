@@ -20,7 +20,7 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
       'mfasiri_homepage' => [
           'variables' => [
 //              'platform_node' => $interpretor_platform->getTranslation($langcode),
-              'platform_node' => $translation,
+//              'platform_node' => $translation,
           ],
       ],
     ];
