@@ -1,7 +1,7 @@
 <div class="homepage-services col-sm-12">
     <div class="row well well-sm">
         <div class="col-sm-4 img-side">
-            <a href="#">
+            <a href="{{ drupal_token('site:url') ~ path('entity.node.canonical', {'node':node1.id}) }}">
                 <img
                      src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}"
                      alt="{{ node1.field_service_image.alt }}">
@@ -18,7 +18,7 @@
             {{ node2.body.value|truncate(400, true, true)|raw }}
         </div>
         <div class="col-sm-4 img-side">
-            <a href="#">
+            <a href="{{ drupal_token('site:url') ~ path('entity.node.canonical', {'node':node2.id}) }}">
                 <img
                      src="{{ node2.field_service_image.entity.uri.value | image_style('service_image_250x150') }}"
                      alt="{{ node2.field_service_image.alt }}">
