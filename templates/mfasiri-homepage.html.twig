@@ -1,6 +1,6 @@
-<div class="container">
+<div>
     <ul class="media-list">
-        <li class="media">
+        <li class="media well well-sm">
             <div class="media-left">
                 <a href="#">
                     <img class="media-object" src="{{ node1.field_service_image.entity.uri.value | image_style('service_image_250x150') }}" alt="...">
@@ -11,7 +11,7 @@
                 {{ node1.body.value|raw }}
             </div>
         </li>
-        <li class="media">
+        <li class="media well well-sm">
             <div class="media-body">
                 <h4 class="media-heading">{{ node2.title.value }}</h4>
                 {{ node2.body.value|raw }}
