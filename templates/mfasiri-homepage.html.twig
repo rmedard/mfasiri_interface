@@ -9,13 +9,13 @@
         </div>
         <div class="col-sm-8 text-side">
             <h3  class="text-center">{{ node1.title.value }}</h3>
-            {{ node1.body.value|truncate(100, true, true)|raw }}
+            {{ node1.body.value|truncate(400, true, true)|raw }}
         </div>
     </div>
     <div class="row well well-sm">
         <div class="col-sm-8 text-side">
             <h3 class="text-center">{{ node2.title.value }}</h3>
-            {{ node2.body.value|raw }}
+            {{ node2.body.value|truncate(400, true, true)|raw }}
         </div>
         <div class="col-sm-4 img-side">
             <a href="#">
