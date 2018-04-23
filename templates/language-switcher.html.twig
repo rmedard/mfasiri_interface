@@ -1,12 +1,12 @@
 <div>
-    Languages
-    <div class="btn-group" role="group" aria-label="...">
-
-    {#{{ path('entity.node.canonical', {'node':node1.id}) }}#}
-    {% for link in links %}
-        {% if link.url.routename == 'entity.node.canonical' %}
-            <button type="button" class="btn btn-default">{{ path('entity.node.canonical', {'node':link.url.routeparameters.node}) }} </button>
-        {% endif %}
-    {% endfor %}
-    </div>
+    <ul class="nav nav-tabs nav-justified">
+        {% for link in links %}
+            {% if link.url.routename == 'entity.node.canonical' %}
+                <li><a href="{{ path('entity.node.canonical', {'node':link.url.routeparameters.node}) }}">
+                        {{ link.language.label }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 </div>
