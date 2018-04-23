@@ -43,13 +43,13 @@ class LanguageSwitcher extends BlockBase {
     public function build() {
 //        $currentUrl = Url::fromRoute('<current>', array('language' => Drupal::languageManager()->getCurrentLanguage()));
         $currentUrl = Url::fromUri('internal:' . Drupal::request()->getRequestUri());
-        $links = Drupal::languageManager()
-            ->getLanguageSwitchLinks(LanguageInterface::TYPE_INTERFACE, $currentUrl)->links;
+        $languages = Drupal::languageManager()
+            ->getLanguageSwitchLinks(LanguageInterface::TYPE_INTERFACE, $currentUrl);
 //        kint(['route' => $currentUrl->toString(), 'languages' => $languages]);
 //        kint($languages);
         return [
             '#theme' => 'language_switcher',
-            '#links' => $links
+            '#links' => $languages->links
         ];
     }
 }

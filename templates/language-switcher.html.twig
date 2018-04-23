@@ -3,7 +3,7 @@
     {#<div class="btn-group" role="group" aria-label="...">#}
     {{ links }}
     {% for link in links %}
-        <button type="button" class="btn btn-default">{{ loop.index }}: {{ link }}</button>
+        <button type="button" class="btn btn-default">{{ loop.index }}: {{ link.language.id }}</button>
     {% endfor %}
     {#</div>#}
 </div>
