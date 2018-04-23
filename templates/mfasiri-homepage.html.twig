@@ -1,10 +1,10 @@
 <div class="homepage">
     <div class="row">
         <div class="col-sm-9">{{ node1.body.value|raw }}</div>
-        <div class="col-sm-3">{{ node1.title.value }}{{ node1.field_service_image.entity.uri.value | image_style('thumbnail') }} </div>
+        <div class="col-sm-3">{{ node1.title.value }} <img src="{{ node1.field_service_image.entity.uri.value | image_style('thumbnail') }}" alt="node1"> </div>
     </div>
     <div class="row">
-        <div class="col-sm-3">{{ node2.title.value }}{{ node1.field_service_image.entity.uri.value | image_style('thumbnail') }}</div>
+        <div class="col-sm-3">{{ node2.title.value }} <img src="{{ node1.field_service_image.entity.uri.value | image_style('thumbnail') }}" alt="node2"></div>
         <div class="col-sm-9">{{ node2.body.value|raw }}</div>
     </div>
 </div>
