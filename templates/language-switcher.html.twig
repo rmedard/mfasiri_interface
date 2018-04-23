@@ -1,5 +1,5 @@
 <div>
-    <ul class="nav nav-tabs nav-justified">
+    <ul class="nav nav-pills nav-justified">
         {% for link in links %}
             {% if link.url.routename == 'entity.node.canonical' %}
                 <li><a href="{{ path('entity.node.canonical', {'node':link.url.routeparameters.node}) }}">
