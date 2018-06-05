@@ -44,6 +44,9 @@ class LanguageSwitcher extends BlockBase {
         $currentUrl = Url::fromUri('internal:' . Drupal::request()->getRequestUri());
         $languages = Drupal::languageManager()
             ->getLanguageSwitchLinks(LanguageInterface::TYPE_INTERFACE, $currentUrl);
+        $languages1 = Drupal::languageManager()
+            ->getLanguageSwitchLinks(LanguageInterface::TYPE_CONTENT, $currentUrl);
+        Drupal::logger('mfasiri_interface')->warning("Langs: " . implode('|', $languages) . "## Langs1: " . implode('|', $languages1));
         return [
             '#theme' => 'language_switcher',
             '#links' => $languages->links,
