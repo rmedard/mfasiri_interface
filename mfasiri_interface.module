@@ -21,5 +21,10 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
                 'links' => NULL
             ],
         ],
+        'facebook_like_box' => [
+            'variables' => [
+                'links' => NULL
+            ],
+        ],
     ];
 }
