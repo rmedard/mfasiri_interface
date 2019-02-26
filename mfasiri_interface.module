@@ -39,6 +39,9 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
  */
 function mfasiri_interface_block_access(Block $block, $operation, AccountInterface $account)
 {
+    kint($block);
+    die();
+
     $showBlock = false;
     $node = Drupal::routeMatch()->getParameter('node');
     $routeObject = Drupal::routeMatch()->getRouteObject();
