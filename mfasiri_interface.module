@@ -51,7 +51,7 @@ function mfasiri_interface_block_access(Block $block, $operation, AccountInterfa
         $display_id = $routeObject->getDefault('display_id');
     }
 
-    if ($operation == 'view' and $block->getPluginId() == 'block-kinyarwandaplatform') {
+    if ($operation == 'view' and $block->getPluginId() == 'kinyarwandaplatform') {
         return AccessResult::forbiddenIf($showBlock == false)->addCacheableDependency($block);
     }
 
