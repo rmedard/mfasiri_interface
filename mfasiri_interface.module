@@ -4,11 +4,6 @@
  * A description of what your module does.
  */
 
-use Drupal\block\Entity\Block;
-use Drupal\Core\Access\AccessResult;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\node\NodeInterface;
-
 /**
  * Implements hook_theme().
  */
@@ -32,31 +27,4 @@ function mfasiri_interface_theme($existing, $type, $theme, $path)
             ],
         ],
     ];
-}
-
-/**
- * Implements hook_block_access().
- */
-function mfasiri_interface_block_access(Block $block, $operation, AccountInterface $account)
-{
-//    kint($block);
-//    die();
-
-    $showBlock = false;
-    $node = Drupal::routeMatch()->getParameter('node');
-    $routeObject = Drupal::routeMatch()->getRouteObject();
-
-    $nodeTypes = array('course');
-    if (isset($node) and $node instanceof NodeInterface and in_array($node->bundle(), $nodeTypes)) {
-        $showBlock = true;
-    } elseif ($routeObject) {
-        $view_id = $routeObject->getDefault('view_id');
-        $display_id = $routeObject->getDefault('display_id');
-    }
-
-    if ($operation == 'view' and $block->getPluginId() == 'kinyarwandaplatform') {
-        return AccessResult::forbiddenIf($showBlock == false)->addCacheableDependency($block);
-    }
-
-    return AccessResult::neutral();
 }
